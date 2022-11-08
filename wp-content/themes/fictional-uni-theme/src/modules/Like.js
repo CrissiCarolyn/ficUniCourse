@@ -48,7 +48,7 @@ class Like {
         url: universityData.root_url + "/wp-json/university/v1/manageLike",
         //method: 'delete',
         //data: { "like": currentLikeBox.getAttribute("data-like") },
-        params: {like: currentLikeBox.getAttribute("data-like") },
+        params: {'id': currentLikeBox.getAttribute("data-like") },
       })
       currentLikeBox.setAttribute("data-exists", "no")
       var likeCount = parseInt(currentLikeBox.querySelector(".like-count").innerHTML, 10)
