@@ -28,9 +28,9 @@ if (strstr($_SERVER['SERVER_NAME'], 'fictional-university.local')) {
 	define( 'DB_HOST', 'localhost' );
 
 } else {
-	define( 'DB_NAME', 'wp_yojes' );
-	define( 'DB_USER', 'wp_ml8zn' );
-	define( 'DB_PASSWORD', 'GKn&ydm4*7^~!8cD' );
+	define( 'DB_NAME', 'wp_dxdht' );
+	define( 'DB_USER', 'wp_bwmcf' );
+	define( 'DB_PASSWORD', 'XW9C#x2i%8pkSV87' );
 	define( 'DB_HOST', 'localhost' );
 
 }
