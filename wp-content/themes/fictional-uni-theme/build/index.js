@@ -2344,6 +2344,9 @@ class LikePost {
         method: 'delete',
         data: {
           "like": postCurrentLikeBox.getAttribute("post-data-like")
+        },
+        headers: {
+          'Content-Type': 'application/json'
         }
       });
       postCurrentLikeBox.setAttribute("data-exists-post", "no");
