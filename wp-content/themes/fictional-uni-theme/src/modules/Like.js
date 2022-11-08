@@ -44,10 +44,11 @@ class Like {
 
   async deleteLike(currentLikeBox) {
     try {
-      const response = await axios({
+      const response = await axios.delete({
         url: universityData.root_url + "/wp-json/university/v1/manageLike",
-        method: 'delete',
-        data: { "like": currentLikeBox.getAttribute("data-like") },
+        //method: 'delete',
+        //data: { "like": currentLikeBox.getAttribute("data-like") },
+        params: {like: currentLikeBox.getAttribute("data-like") },
       })
       currentLikeBox.setAttribute("data-exists", "no")
       var likeCount = parseInt(currentLikeBox.querySelector(".like-count").innerHTML, 10)
