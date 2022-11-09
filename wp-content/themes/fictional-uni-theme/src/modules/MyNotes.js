@@ -60,7 +60,7 @@ class MyNotes {
   }
 
 
-  async deleteNote(e) {
+  async deleteNoteEdited(e) {
     const thisNote = this.findNearestParentLi(e.target)
 
     try {
@@ -83,7 +83,7 @@ class MyNotes {
 
 
 
-  async deleteNotebk(e) {
+  async deleteNote(e) {
     const thisNote = this.findNearestParentLi(e.target)
 
     try {
@@ -116,7 +116,7 @@ class MyNotes {
       const response = await axios.post(universityData.root_url + "/wp-json/wp/v2/note/" + thisNote.getAttribute("data-id"), ourUpdatedPost)
       this.makeNoteReadOnly(thisNote)
     } catch (e) {
-      console.log("Sorry")
+      console.log(e)
     }
   }
 
