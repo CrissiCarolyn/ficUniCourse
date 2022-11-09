@@ -27,12 +27,21 @@ if (strstr($_SERVER['SERVER_NAME'], 'fictional-university.local')) {
 	define( 'DB_PASSWORD', 'root' );
 	define( 'DB_HOST', 'localhost' );
 
-} else {
+} elseif (strstr($_SERVER['SERVER_NAME'], 'fictionaluniversity.victoriatechnologies.com')) {
 	define( 'DB_NAME', 'wp_dxdht' );
 	define( 'DB_USER', 'wp_bwmcf' );
 	define( 'DB_PASSWORD', 'XW9C#x2i%8pkSV87' );
 	define( 'DB_HOST', 'localhost' );
 
+} elseif (strstr($_SERVER['SERVER_NAME'], ' funi.victoriatechnologies.com')) {
+
+	define( 'DB_NAME', 'wp_7oqtp' );
+
+	define( 'DB_USER', 'wp_c9rg6' );
+
+	define( 'DB_PASSWORD', 'm64YNJc!9U%4d*d?' );
+
+	define( 'DB_HOST', 'localhost:3306' );
 }
 
 
