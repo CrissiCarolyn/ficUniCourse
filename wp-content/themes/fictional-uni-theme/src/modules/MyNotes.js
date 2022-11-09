@@ -60,7 +60,7 @@ class MyNotes {
   }
 
 
-  async deleteNoteEdited(e) {
+  async deleteNote(e) {
     const thisNote = this.findNearestParentLi(e.target)
 
     try {
@@ -83,7 +83,7 @@ class MyNotes {
 
 
 
-  async deleteNote(e) {
+  async deleteNoteMain(e) {
     const thisNote = this.findNearestParentLi(e.target)
 
     try {
