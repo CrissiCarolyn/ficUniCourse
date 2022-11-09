@@ -77,7 +77,7 @@ class MyNotes {
         document.querySelector(".note-limit-message").classList.remove("active")
       }
     } catch (e) {
-      console.log(e)
+      console.log("Sorry")
     }
   }
 
