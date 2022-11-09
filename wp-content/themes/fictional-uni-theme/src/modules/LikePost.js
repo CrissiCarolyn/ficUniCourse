@@ -44,12 +44,14 @@ class LikePost {
 
   async deleteLikePost(postCurrentLikeBox) {
     try {
-      const response = await axios({
-        url: universityData.root_url + "/wp-json/university/v1/managePostLike", 
+      const response = await axios.post({
         method: 'delete',
+        url: universityData.root_url + "/wp-json/university/v1/managePostLike", 
         data: { "like": postCurrentLikeBox.getAttribute("post-data-like") },
-        headers: {
-            'Content-Type': 'application/json'}
+        headers: {'Content-Type': 'application/json'},
+        headers: {'Access-Control-Allow-Origin': '*'},
+        headers: {'Access-Control-Allow-Headers': '*'},
+        headers: {'Access-Control-Allow-Methods': 'DELETE'}
       })
       postCurrentLikeBox.setAttribute("data-exists-post", "no")
       var postLikeCount = parseInt(postCurrentLikeBox.querySelector(".post-like-count").innerHTML, 10)
