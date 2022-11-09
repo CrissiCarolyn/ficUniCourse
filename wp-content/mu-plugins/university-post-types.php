@@ -98,7 +98,7 @@ register_post_type('note', array(
 
 //Like Post Type
 register_post_type('like', array(
-    'capability_type' => 'note',
+    'capability_type' => 'like',
     'map_meta_cap' => true,
     'supports' => array('title'),
     'public' => false,
