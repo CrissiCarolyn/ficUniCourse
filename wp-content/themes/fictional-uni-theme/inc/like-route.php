@@ -9,7 +9,7 @@ function universityLikeRoutes() {
   ));
 
   register_rest_route('university/v1', 'manageLike', array(
-    'methods' => 'DELETE',
+    'methods' => WP_REST_SERVER::DELETABLE,
     'callback' => 'deleteLike'
   ));
 }
