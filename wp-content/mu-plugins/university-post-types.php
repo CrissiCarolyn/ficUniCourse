@@ -111,6 +111,21 @@ register_post_type('like', array(
      'menu_icon' => 'dashicons-heart'
 ));
 
+//Hero Slider Post Type
+register_post_type('slider', array(
+    'supports' => array('title'),
+    'public' => false,
+    'show_ui' => true,
+    'labels' => array(
+        'name' => 'Home Sliders',
+        'add_new_item' => 'Add New Slider',
+        'edit_item' => 'Edit Slider',
+        'all_items' => 'All Sliders',
+        'singular_name' => 'Slider'
+    ),
+     'menu_icon' => 'dashicons-embed-photo'
+));
+
 
 }
 

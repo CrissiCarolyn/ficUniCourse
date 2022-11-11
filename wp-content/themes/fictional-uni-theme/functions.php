@@ -50,6 +50,49 @@ function pageBanner($args = NULL) {
 <?php }
 
 
+/*function HeroSlider($args = NULL) {
+    if(!$args['SliderTitle']) {
+        $args['SliderTitle'] = get_field('slide_title');
+    }
+
+    if(!$args['SliderSubtitle']) {
+        $args['SliderSubtitle'] = get_field('slide_subtitle');
+    }
+
+    if(!$args['buttonText']) {
+        $args['buttonText'] = get_field('button_text');
+    }
+
+    if(!$args['buttonLink']) {
+        $args['buttonLink'] = get_field('button_link');
+    }
+
+    if(!$args['SliderPhoto']) {
+        $args['SliderPhoto'] = get_field('slider_image')['sizes']['HeroSlider'];
+    } else {
+        $args['SliderPhoto'] = get_theme_file_uri('/images/ocean.jpg');
+    }
+    
+?>
+    <div class="hero-slider">
+        <div data-glide-el="track" class="glide__track">
+            <div class="glide__slides">
+                <div class="hero-slider__slide" style="background-image: url(<?php echo $args['slider_image']; ?>);">
+                    <div class="hero-slider__interior container">
+                        <div class="hero-slider__overlay">
+                            <h2 class="headline headline--medium t-center"><?php echo $args['slide_title'] ?></h2>
+                            <p class="t-center"><?php echo $args['slide_subtitle'] ?></p>
+                            <p class="t-center no-margin"><a href="#" class="btn btn--blue"><?php echo $args['button_text'] ?></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider__bullets glide__bullets" data-glide-el="controls[nav]"></div>
+        </div>
+    </div>
+
+<?php }
+*/
 
 function university_files() {
     wp_enqueue_script('googleMap', '//maps.googleapis.com/maps/api/js?key=AIzaSyBQ6FLrRTK4Xpg6-zT1h8oiTvaugDAeUKQ', NULL, '1.0', true);
@@ -74,8 +117,9 @@ function university_features() {
     add_image_size('professorLandscape', 400, 260, true);
     add_image_size('professorPortrait', 480, 650, true);
     add_image_size('pageBanner', 1500, 350, true);
+    add_image_size('HeroSlider', 1900, 525, true);
 
-
+    
 }
 
 add_action('after_setup_theme', 'university_features');
