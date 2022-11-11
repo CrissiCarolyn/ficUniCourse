@@ -48,7 +48,7 @@ class LikePost {
         method: 'delete',
         url: universityData.root_url + "/wp-json/university/v1/managePostLike", 
         data: { "like": postCurrentLikeBox.getAttribute("post-data-like") },
-        timeout: 2
+        
       })
       postCurrentLikeBox.setAttribute("data-exists-post", "no")
       var postLikeCount = parseInt(postCurrentLikeBox.querySelector(".post-like-count").innerHTML, 10)
