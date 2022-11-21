@@ -60,35 +60,13 @@ class MyNotes {
   }
 
 
+
+
   async deleteNote(e) {
     const thisNote = this.findNearestParentLi(e.target)
 
     try {
-      const response = await axios.post(universityData.root_url + "/wp-json/wp/v2/note/" + thisNote.getAttribute("data-id"), {_method: 'delete'})
-      
-      thisNote.style.height = `${thisNote.offsetHeight}px`
-      setTimeout(function () {
-        thisNote.classList.add("fade-out")
-      }, 20)
-      setTimeout(function () {
-        thisNote.remove()
-      }, 401)
-      if (response.data.userNoteCount < 5) {
-        document.querySelector(".note-limit-message").classList.remove("active")
-      }
-    } catch (e) {
-      console.log("Sorrrrrrrry")
-    }
-  }
-
-
-
-  async deleteNoteMain(e) {
-    const thisNote = this.findNearestParentLi(e.target)
-
-    try {
       const response = await axios.delete(universityData.root_url + "/wp-json/wp/v2/note/" + thisNote.getAttribute("data-id"))
-
       thisNote.style.height = `${thisNote.offsetHeight}px`
       setTimeout(function () {
         thisNote.classList.add("fade-out")
